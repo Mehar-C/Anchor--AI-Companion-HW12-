@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>NSCameraUsageDescription</key>
+	<string>This app needs camera access to measure vitals with SmartSpectra.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Anchor needs microphone access for voice conversations and hands-free support during stress management sessions.</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Anchor needs speech recognition to enable hands-free voice conversations when you need support.</string>
+	<key>NSHealthShareUsageDescription</key>
+	<string>Anchor needs health data access to monitor heart rate from your Apple Watch for stress detection.</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>Anchor needs health data access to sync stress monitoring data.</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>anchor</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<false/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>api.presage.ai</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<false/>
+				<key>NSIncludesSubdomains</key>
+				<true/>
+				<key>NSExceptionRequiresForwardSecrecy</key>
+				<false/>
+				<key>NSExceptionMinimumTLSVersion</key>
+				<string>TLSv1.2</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>
